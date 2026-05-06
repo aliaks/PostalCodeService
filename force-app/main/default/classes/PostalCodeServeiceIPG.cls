@@ -17,6 +17,6 @@ public class PostalCodeServeiceIPG extends PostalCodeServiceAbstract
 
     public override void setOpportunityPostalCode() 
     {   this.opp.Postal_Code__c = this.pc.Id;
-    }
+    }       
 
 }

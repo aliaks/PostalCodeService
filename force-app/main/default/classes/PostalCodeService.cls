@@ -20,7 +20,7 @@ public with sharing class PostalCodeService
                 }         
                 else if(record instanceof Account)
                 {   Account acc = (Account)record;
-                    
+
                     if(acc.Business_Unit_Name__c == 'OMG'){ service = new PostalCodeServeiceAMAT(acc, p);}
                     else if(acc.Business_Unit_Name__c == 'Precast'){ service = new PostalCodeServeiceIPG(acc, p);}
                     else if(acc.Business_Unit_Name__c == 'APG'){ service = new PostalCodeServeiceAPG(acc, p);}
@@ -28,6 +28,7 @@ public with sharing class PostalCodeService
 
                     service.setAccountPostalCode();
                 }
+                
             }
         }
     }
